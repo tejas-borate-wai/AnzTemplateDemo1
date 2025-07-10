@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, Injector } from '@angular/core';
+import { AppComponentBase } from '@shared/common/app-component-base';
+import { appModuleAnimation } from '@shared/animations/routerTransition';
 
 @Component({
-  selector: 'app-phonebook',
-  templateUrl: './phonebook.component.html',
-  styleUrls: ['./phonebook.component.css']
+    templateUrl: './phonebook.component.html',
+    animations: [appModuleAnimation()],
+    styleUrls: ['./phonebook.component.css']
 })
-export class PhonebookComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class PhonebookComponent extends AppComponentBase {
+    constructor(
+        injector: Injector
+    ) {
+        super(injector);
+    }
 }

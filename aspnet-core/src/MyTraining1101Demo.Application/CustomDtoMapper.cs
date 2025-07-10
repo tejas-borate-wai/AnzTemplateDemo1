@@ -39,6 +39,8 @@ using MyTraining1101Demo.MultiTenancy.Payments;
 using MyTraining1101Demo.MultiTenancy.Payments.Dto;
 using MyTraining1101Demo.Notifications.Dto;
 using MyTraining1101Demo.Organizations.Dto;
+using MyTraining1101Demo.PhoneBook;
+using MyTraining1101Demo.PhoneBook.Dtos;
 using MyTraining1101Demo.Sessions.Dto;
 using MyTraining1101Demo.WebHooks.Dto;
 
@@ -49,6 +51,8 @@ namespace MyTraining1101Demo
         public static void CreateMappings(IMapperConfigurationExpression configuration)
         {
             //Inputs
+            configuration.CreateMap<Person, PersonListDto>();
+
             configuration.CreateMap<CheckboxInputType, FeatureInputTypeDto>();
             configuration.CreateMap<SingleLineStringInputType, FeatureInputTypeDto>();
             configuration.CreateMap<ComboboxInputType, FeatureInputTypeDto>();

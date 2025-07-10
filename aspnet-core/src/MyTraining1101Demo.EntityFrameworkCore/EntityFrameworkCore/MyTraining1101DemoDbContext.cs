@@ -10,6 +10,7 @@ using MyTraining1101Demo.Friendships;
 using MyTraining1101Demo.MultiTenancy;
 using MyTraining1101Demo.MultiTenancy.Accounting;
 using MyTraining1101Demo.MultiTenancy.Payments;
+using MyTraining1101Demo.PhoneBook;
 using MyTraining1101Demo.Storage;
 
 namespace MyTraining1101Demo.EntityFrameworkCore
@@ -18,6 +19,7 @@ namespace MyTraining1101Demo.EntityFrameworkCore
     {
         /* Define an IDbSet for each entity of the application */
 
+        public virtual DbSet<Person> Persons { get; set; }
         public virtual DbSet<BinaryObject> BinaryObjects { get; set; }
 
         public virtual DbSet<Friendship> Friendships { get; set; }
