@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
                         data: { permission: 'Pages.Tenant.Dashboard' },
                     },
                     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+                    { path: 'phonebook', loadChildren: () => import('./phonebook/phonebook.module').then(m => m.PhonebookModule) },
                     { path: '**', redirectTo: 'dashboard' },
                 ],
             },
